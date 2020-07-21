@@ -9,13 +9,13 @@ import (
 
 // SimpleArtist contains basic info about an artist.
 type SimpleArtist struct {
-	Name string `json:"name"`
-	ID   ID     `json:"id"`
+	Name string `json:"name" bson:"name"`
+	ID   ID     `json:"id" bson:"_id"`
 	// The Spotify URI for the artist.
-	URI URI `json:"uri"`
+	URI URI `json:"uri" bson:"uri"`
 	// A link to the Web API enpoint providing full details of the artist.
-	Endpoint     string            `json:"href"`
-	ExternalURLs map[string]string `json:"external_urls"`
+	Endpoint     string            `json:"href" bson:"href"`
+	ExternalURLs map[string]string `json:"external_urls" bson:"external_urls"`
 }
 
 // FullArtist provides extra artist data in addition to what is provided by SimpleArtist.
