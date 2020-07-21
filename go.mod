@@ -1,4 +1,4 @@
-module github.com/elcaminio/spotify
+module github.com/elcamino/spotify
 
 go 1.14
 
